@@ -56,21 +56,73 @@ PORT=8080 npm start
 ### Using cURL
 
 ```bash
+# Test the root endpoint
 curl http://localhost:3000
-# Output: Hello world
 
+# Test the evening endpoint
 curl http://localhost:3000/evening
-# Output: Good evening
+```
+
+### Using Postman or Similar Tools
+
+1. Create a new GET request
+2. Set the URL to `http://localhost:3000` or `http://localhost:3000/evening`
+3. Send the request and view the response
+
+## API Endpoints Documentation
+
+### GET /
+
+Returns a simple greeting message.
+
+**Response:**
+- Status Code: 200 OK
+- Content-Type: text/html; charset=utf-8
+- Body: `Hello world`
+
+**Example:**
+```bash
+curl http://localhost:3000
+# Response: Hello world
+```
+
+### GET /evening
+
+Returns an evening greeting message.
+
+**Response:**
+- Status Code: 200 OK
+- Content-Type: text/html; charset=utf-8
+- Body: `Good evening`
+
+**Example:**
+```bash
+curl http://localhost:3000/evening
+# Response: Good evening
 ```
 
 ## Project Structure
 
 ```
 .
-├── server.js       # Main application file with Express server and endpoints
-├── package.json    # Project dependencies and scripts
-└── README.md       # This file
+├── server.js          # Main application file with Express server
+├── package.json       # Project metadata and dependencies
+├── package-lock.json  # Dependency lock file
+├── node_modules/      # Installed dependencies (auto-generated)
+├── .gitignore        # Git ignore patterns
+└── README.md         # This file
 ```
+
+## Technologies Used
+
+- **Node.js** (v18+) - JavaScript runtime environment
+- **Express.js** (v5.1.0) - Fast, unopinionated, minimalist web framework for Node.js
+
+## Learning Resources
+
+- [Node.js Documentation](https://nodejs.org/docs/)
+- [Express.js Documentation](https://expressjs.com/)
+- [npm Documentation](https://docs.npmjs.com/)
 
 ## License
 
